@@ -1,0 +1,133 @@
+.product-table-component {
+
+  @include full-width;
+	@include cf;
+  direction: rtl;
+
+  &__inner {
+    @include contain-width();
+    @include cf;
+  }
+
+  .product-table-item {
+    @include cf;
+    background-color: $eir-gray-light;
+
+    .col {
+      @include col(1/2);
+    }
+
+    &__img {
+      position: relative;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+    }
+
+    &__text {
+      @include box-sizing(border-box);
+      position: relative;
+      display: table;
+      width: 100%;
+      padding: 45px 0 30px 0;
+      overflow: hidden;
+    }
+
+    h3 {
+      margin-bottom: 5px;
+      color: $eir-blue-light;
+      span {
+        @include webfont(20px, $bold);
+        color: rgba($eir-black, 0.8);
+      }
+    }
+
+    .arrow-label {
+      @include arrow-label ($bg-color: $eir-green);
+    }
+
+    .info {
+      @include webfont(17px, $bold);
+      display: block;
+      margin-bottom: 5px;
+      line-height: 20px;
+      i {
+        @include webfont(14px, $book);
+        display: block;
+      }
+    }
+
+  }
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+  .product-table-component {
+
+    .product-table-item {
+
+      &__img {
+        @include col(1/2);
+        position: relative;
+        height: 285px;
+        overflow: hidden;
+        img {
+          width: 130%;
+        }
+      }
+
+      &__text {
+        @include col(1/2);
+        height: 285px;
+        padding: 0;
+      }
+
+      &:nth-child(2n+2) {
+        .product-table-item__img, .product-table-item__text {
+          float: left;
+        }
+      }
+    }
+
+  }
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up) {
+  .product-table-component {
+
+    .product-table-item {
+      @include col(1/2);
+
+      .col {
+        @include col(1/1);
+      }
+
+      &__img {
+        @include col(1/2);
+        position: relative;
+        height: 285px;
+        overflow: hidden;
+        img {
+          width: 160%;
+        }
+      }
+
+      &__text {
+        @include col(1/2);
+        height: 285px;
+        padding: 0;
+      }
+
+      &:nth-child(4n+4), &:nth-child(4n+3) {
+        .product-table-item__img, .product-table-item__text {
+          float: left;
+        }
+      }
+    }
+
+  }
+}

@@ -1,0 +1,71 @@
+//------------------------------------
+//    VARS.SCSS
+//------------------------------------
+
+//------------------------------------
+//    BREAKPOINTS
+//------------------------------------
+// @768
+// 9 columns
+// max width: 729
+// column width: 65
+// gutter: 18px
+
+// @1024
+// 12 columns
+// max width: 978
+// column width: 65
+// gutter: 18px
+
+// @1280
+// 12 columns
+// max width: 1171
+// column width: 82
+// gutter: 18px
+
+$bp-tablet:                800px 1139px;              // 800 - 1139
+$bp-tablet-and-desktop:    800px 1279px;              // 800px - 1279
+$bp-desktop:               1140px 1279px;             // 1140 - 1279
+$bp-desktop-and-up:        1140px;                    // 1140 - ∞
+$bp-desktop-large:         1280px;                    // 1280 - ∞
+$bp-retina:                min-resolution 1.5dppx;    // retina screens
+$bp-form:                  873px 768px;
+
+//------------------------------------
+//    FONTS
+//------------------------------------
+$fbronibe:    "FbRonibe", "Trebuchet MS", Ubuntu, serif;
+$book:       300;
+$medium:     400;
+$bold:       700;
+$italic:     italic;
+
+//------------------------------------
+//    COLORS
+//------------------------------------
+// Common Colors
+$eir-white: #ffffff;
+$eir-black: #000000;
+$eir-yellow: #f99e1b;
+$eir-blue: #003559;
+$eir-blue-light: #054770;
+$eir-blue-dark: #061d27;
+$eir-green: #93a33a;
+
+$eir-gray: rgba($eir-black, 0.2);
+$eir-gray-light: rgba($eir-black, 0.1);
+$eir-gray-dark: rgba($eir-black, 0.6);
+$eir-gray-normal: #e0e0e0;
+
+.bg-blue {
+  background-color: rgba($eir-blue, 0.8);
+}
+
+
+// Outline color on focus
+
+$default-text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
+
+//------------------------------------
+//    EXTRAS
+//------------------------------------

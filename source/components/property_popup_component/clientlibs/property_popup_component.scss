@@ -1,0 +1,323 @@
+.property-popup-component {
+	@include cf;
+  display: none;
+  z-index: 3000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: $eir-gray-dark;
+  overflow-y: scroll;
+
+  &__inner {
+    @include cf;
+    @include contain-width();
+    @include box-sizing(border-box);
+    border: solid $eir-white 1px;
+  }
+
+  .close-popup-btn {
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    margin: 20px;
+  }
+
+  .property-popup-info-container {
+    @include cf;
+    @include box-sizing(border-box);
+    position: relative;
+    direction: rtl;
+    background-color: $eir-white;
+
+    &--text, &--text2 {
+      @include box-sizing(border-box);
+      @include cf;
+      padding: 25px 20px 20px 20px;
+
+      h3 {
+        @include webfont(31px, $bold);
+        margin-bottom: 20px;
+        color: #333333;
+      }
+      p {
+        @include webfont(18px, $book);
+        margin-bottom: 10px;
+        color: #333333;
+      }
+    }
+
+    &--text2 {
+      border-top: solid rgba($eir-black, 0.8) 1px;
+    }
+
+    &--list {
+      @include cf;
+      @include col(1/2);
+      @include webfont(18px, $book);
+      color: #333333;
+    }
+  }
+
+  .property-popup-slider-container {
+    position: relative;
+    background-color: $eir-blue-light;
+
+    .slider-control-button {
+      position: absolute;
+      z-index: 30;
+      bottom: 20px;
+      right: 20px;
+
+      li {
+        @include box-sizing(border-box);
+        float: right;
+        width: 34px;
+        height: 36px;
+        background-color: $eir-yellow;
+        margin: 0 2px;
+        padding: 12px 0;
+        text-align: center
+      }
+
+      a {
+        display: inline-block;
+      }
+    }
+
+    .property-popup-slider-navigation {
+      @include center-y();
+      width: 90%;
+      padding: 0 5%;
+      z-index: 10;
+      .prev, .next {
+        display: inline-block;
+        width: 31px;
+        height: 58px;
+        margin-left: 0;
+      }
+      .next {
+        @include transform(rotate(-180deg));
+        float: right;
+      }
+    }
+
+    .property-popup-slider-carousel {
+      overflow: hidden;
+      &__item {
+        @include cf;
+        position: relative;
+        direction: rtl;
+      }
+    }
+
+    .property-popup-slider__image {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .property-popup-bottom-container {
+    @include cf;
+    @include box-sizing(border-box);
+    direction: rtl;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    background-color: $eir-blue-dark;
+    color: $eir-white;
+
+    &--user-help {
+      @include box-sizing(border-box);
+      padding: 15px 25px 0 0;
+    }
+
+    &--button-list {
+      @include cf;
+      @include box-sizing(border-box);
+      padding: 40px 20px;
+    }
+
+    .btn {
+      @include global-button($padding-t-b: 10px, $padding-l-r: 0, $b-radius: 0px, $bg-color: $eir-white, $font-size: 24px, $border-color: transparent, $color: $eir-black);
+      @include box-sizing(border-box);
+      @include webfont(24px, $book);
+      float: right;
+      width: 179px;
+      margin-bottom: 5px;
+      margin-left: 5px;
+      padding-top: 13px;
+      padding-bottom: 9px;
+      &:hover {
+        background-color: $eir-blue;
+        color: $eir-white;
+      }
+    }
+
+    .btn-blue {
+      @include webfont(24px, $bold);
+      background-color: $eir-blue;
+      color: $eir-white;
+      &:hover {
+        background-color: $eir-white;
+        color: $eir-blue;
+      }
+    }
+
+    .user-help-link {
+      @include webfont(22px, $bold);
+      color: $eir-yellow;
+    }
+
+    .user-help-img {
+      @include border-radius(150px);
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      margin-left: 20px;
+      border: solid $eir-white 2px;
+    }
+
+  }
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+	.property-popup-component {
+
+    &__inner {
+      @include center-x;
+    }
+
+    .property-popup-info-container {
+
+      &--text, &--text2{
+        padding: 30px 30px 20px 30px;
+        p {
+          @include webfont(21px, $book);
+        }
+      }
+
+      &--list {
+        @include webfont(21px, $book);
+      }
+    }
+
+    .property-popup-bottom-container {
+      &--user-help {
+        @include col(5.3/12);
+      }
+
+      &--button-list {
+        @include col(6.7/12);
+        padding: 40px 20px;
+      }
+    }
+
+	}
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up) {
+	.property-popup-component {
+
+    &__inner {
+      @include center-x;
+    }
+
+    .property-popup-info-container {
+      @include col(4.1/12);
+      float: left;
+      height: 655px;
+
+      &--text{
+        padding: 30px 35px 10px 35px;
+        p {
+          @include webfont(21px, $book);
+        }
+      }
+
+      &--text2 {
+        padding: 60px 35px 30px 0;
+        p {
+          @include webfont(21px, $book);
+        }
+      }
+
+      &--list {
+        @include webfont(21px, $book);
+      }
+    }
+
+    .property-popup-slider-container {
+      @include col(7.9/12);
+      float: left;
+
+      .property-popup-slider__image {
+        position: relative;
+        height: 655px;
+
+        img {
+          width: 150%;
+        }
+      }
+    }
+
+    .property-popup-bottom-container {
+      &--user-help {
+        @include col(4.1/12);
+      }
+
+      &--button-list {
+        @include col(7.9/12);
+        padding: 40px 0;
+      }
+    }
+
+	}
+}
+
+
+
+.eir-checkbox-block {
+  float: right;
+  position: relative;
+  margin: 0 15px 0 10px;
+  label {
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: solid $eir-gray 1px;
+    &:after {
+      content: '';
+      width: 22px;
+      height: 9px;
+      position: absolute;
+      top: -3px;
+      left: 2px;
+      border: 2px solid $eir-blue-dark;
+      border-top: none;
+      border-right: none;
+      background: transparent;
+      opacity: 0;
+      transform: rotate(-45deg);
+    }
+    &:hover::after {
+      opacity: 0.3;
+    }
+  }
+  input[type=checkbox] {
+    visibility: hidden;
+    &:checked + label:after {
+      opacity: 1;
+    }
+  }
+}

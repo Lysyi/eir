@@ -1,0 +1,85 @@
+{
+    "default": {
+        "title": "Eretz-Eir",
+        "description": "",
+        "keywords": ""
+    },
+
+    "home": {
+        "title": "Eretz-Eir - Home",
+        "description": "",
+        "keywords": ""
+    },
+
+    "all-components": {
+        "title": "Eretz-Eir - all-components",
+        "description": "",
+        "keywords": ""
+    },
+
+    "all-popups": {
+        "title": "Eretz-Eir - all-popups",
+        "description": "",
+        "keywords": ""
+    },
+
+    "page3-about": {
+        "title": "Eretz-Eir - about",
+        "description": "",
+        "keywords": ""
+    },
+
+    "page4-success-stories": {
+        "title": "Eretz-Eir - success-stories",
+        "description": "",
+        "keywords": ""
+    },
+
+    "page5-agent": {
+        "title": "Eretz-Eir - agent",
+        "description": "",
+        "keywords": ""
+    },
+
+    "page6-properties": {
+        "title": "Eretz-Eir - properties",
+        "description": "",
+        "keywords": ""
+    },
+
+    "page7-property": {
+        "title": "Eretz-Eir - property",
+        "description": "",
+        "keywords": ""
+    },
+
+    "page9-contact": {
+        "title": "Eretz-Eir - contact",
+        "description": "",
+        "keywords": ""
+    },
+
+    "page10-blog": {
+        "title": "Eretz-Eir - blog",
+        "description": "",
+        "keywords": ""
+    },
+
+    "page11-single-post": {
+        "title": "Eretz-Eir - single-post",
+        "description": "",
+        "keywords": ""
+    },
+
+    "page12-agents": {
+        "title": "Eretz-Eir - agents",
+        "description": "",
+        "keywords": ""
+    },
+
+    "page13-jobs": {
+        "title": "Eretz-Eir - jobs",
+        "description": "",
+        "keywords": ""
+    }
+}

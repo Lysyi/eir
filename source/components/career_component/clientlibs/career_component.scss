@@ -1,0 +1,231 @@
+.career-component {
+
+	@include cf;
+  @include contain-width();
+  @include webfont(16px, $book);
+  direction: rtl;
+  margin: 0 0 40px 0;
+
+  &__inner {
+    @include cf;
+  }
+
+  .career-component-img-block {
+    overflow: hidden;
+
+    .career-component-img {
+      width: 100%;
+    }
+  }
+
+  .career-component-title-block {
+    @include cf;
+    @include box-sizing(border-box);
+    position: relative;
+    margin-bottom: 60px;
+    text-align: center;
+
+    &--title {
+      @include box-sizing(border-box);
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 35px 20px 20px 20px;
+      background-color: rgba($eir-blue, 0.8);
+      color: $eir-white;
+      text-align: center;
+    }
+  }
+
+  .career-component-header-block {
+    @include cf;
+    padding: 0 20px 0 20px;
+    margin-bottom: 40px;
+    border-bottom: solid $eir-blue-dark 1px;
+
+    &--item {
+      @include webfont(18px, $bold);
+      color: $eir-blue-dark;
+    }
+
+    .career-logo-block {
+      margin-top: 15px;
+      width: 160px;
+    }
+
+    .main-logo {
+      display: block;
+      width: 45px;
+      height: 45px;
+      margin: -10px 0 15px 0;
+      background-image: url('../img/main-logo.svg');
+      background-size: 100% 100%;
+      &__text {
+        display: inline-block;
+        margin: 10px 55px 0 0;
+        width: 103px;
+        height: 30px;
+        background-image: url('../img/main-logo-text.svg');
+      }
+    }
+  }
+
+  .career-component-accordion {
+    @include cf;
+
+    &--item {
+      @include webfont(24px, $bold);
+      @include box-sizing(border-box);
+      padding: 25px 20px 15px 20px;
+      background-color: $eir-gray;
+      text-align: right;
+      color:  $eir-blue-dark;
+      a {
+        color:  $eir-blue-dark;
+      }
+
+      &:nth-child(2n) {
+        @include webfont(20px, $bold);
+        padding: 26px 30px 19px 30px;
+        background-color: $eir-blue;
+        text-align: center;
+        color:  $eir-white;
+        a {
+          color:  $eir-white;
+        }
+      }
+    }
+
+    .accordion-pannel {
+      @include cf;
+      margin-top: 10px;
+    }
+
+    .accordion-content {
+      display: none;
+      @include cf;
+      @include webfont(18px, $book);
+      padding: 25px 20px 15px 20px;
+      background-color: $eir-gray-light;
+    }
+  }
+
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+  .career-component {
+
+    .career-component-img-block {
+      height: 350px;
+    }
+
+    .career-component-header-block {
+      padding: 0 0 0 0;
+      &--item {
+        @include col(6/12);
+        @include webfont(28px, $bold);
+      }
+
+      .career-logo-block {
+        float: left;
+        margin-top: 0;
+        width: 225px;
+      }
+
+      .main-logo {
+        width: 49px;
+        height: 49px;
+        margin: -15px 0 15px 0;
+        &__text {
+          margin: 5px 55px 0 0;
+          width: 162px;
+          height: 47px;
+        }
+      }
+    }
+
+    .career-component-title-block {
+      &--title {
+        display: inline-block;
+        width: auto;
+        margin-top: -150px;
+        padding: 35px 50px 20px 50px;
+      }
+    }
+
+    .career-component-accordion {
+
+      &--item {
+        @include col(6/12);
+        @include webfont(25px, $bold);
+
+        &:nth-child(2n) {
+          @include webfont(21px, $bold);
+        }
+      }
+    }
+
+  }
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up)  {
+  .career-component {
+
+    .career-component-img-block {
+      height: 350px;
+    }
+
+    .career-component-header-block {
+      padding: 0 0 0 0;
+      &--item {
+        @include col(6/12);
+        @include webfont(28px, $bold);
+      }
+
+      .career-logo-block {
+        float: left;
+        margin-top: 0;
+        width: 225px;
+      }
+
+      .main-logo {
+        width: 49px;
+        height: 49px;
+        margin: -15px 0 15px 0;
+        &__text {
+          margin: 5px 55px 0 0;
+          width: 162px;
+          height: 47px;
+        }
+      }
+    }
+
+    .career-component-title-block {
+      &--title {
+        width: auto;
+        display: inline-block;
+        margin-top: -150px;
+        padding: 35px 50px 20px 50px;
+      }
+    }
+
+    .career-component-accordion {
+
+      &--item {
+        @include col(6/12);
+        @include webfont(29px, $bold);
+
+        &:nth-child(2n) {
+          @include webfont(25px, $bold);
+        }
+      }
+    }
+
+  }
+}

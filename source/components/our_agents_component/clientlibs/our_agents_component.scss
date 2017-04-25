@@ -1,0 +1,162 @@
+.our-agents-component {
+
+  @include full-width;
+	@include cf;
+  direction: rtl;
+  margin-bottom: 40px;
+
+  &__inner {
+    @include contain-width();
+    @include cf;
+  }
+
+  .our-agents-list-item {
+    @include cf;
+
+    &__info {
+      @include box-sizing(border-box);
+      @include full-width;
+      position: relative;
+      display: table;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background-color: $eir-blue-light;
+      overflow: hidden;
+
+      &:nth-child(2n+1) {
+        background-color: $eir-blue;
+      }
+    }
+
+    &__agent-block {
+      @include col(11.5/12, $offset: 0.25/12);
+
+      .agent-title {
+        float: left;
+        width: calc(100% - 110px);
+        margin-bottom: 40px;
+        padding-top: 15px;
+        color: $eir-white;
+        span {
+          @include webfont(18px, $book);
+          margin-bottom: 10px;
+          color: $eir-yellow;
+        }
+      }
+
+      .agent-fbook {
+        @include circle-element;
+        display: inline-block;
+      }
+
+      .agent-img {
+        @include border-radius(150px);
+        position: relative;
+        width: 90px;
+        height: 90px;
+        margin-bottom: 40px;
+        border: solid $eir-white 2px;
+      }
+
+      .agent-phone, .agent-location {
+        display: block;
+        &:hover {
+          text-decoration: none;
+        }
+        &:before {
+          @include pseudo-content;
+          @include circle-element;
+          display: inline-block;
+          position: relative;
+          top: 5px;
+          margin: 0 0 0 10px;
+        }
+      }
+
+      .agent-fbook, .agent-phone, .agent-location {
+        @include webfont(18px, $book);
+        position: relative;
+        color: $eir-white;
+      }
+
+      .btn-block {
+        padding-top: 10px;
+        text-align: center;
+      }
+
+      .btn {
+        @include global-button($padding-t-b: 10px, $padding-l-r: 55px, $b-radius: 0px, $bg-color: $eir-green, $font-size: 20px, $border-color: transparent, $color: $eir-white);
+        @include webfont(20px, $bold);
+        padding-top: 15px;
+        &:hover {
+          background-color: $eir-white;
+          color: $eir-green;
+        }
+      }
+    }
+  }
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+  .our-agents-component {
+
+    .our-agents-list-item {
+      &__info {
+        @include col(6/12);
+        height: 396px;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        &:nth-child(2n+1) {
+          background-color: $eir-blue-light;
+        }
+
+        &:nth-child(4n+2), &:nth-child(4n+3) {
+          background-color: $eir-blue;
+        }
+
+      }
+
+      .agent-img {
+        width: 138px;
+        height: 138px;
+      }
+
+      .agent-title {
+        width: calc(100% - 180px);
+        padding-top: 45px;
+      }
+    }
+
+  }
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up) {
+  .our-agents-component {
+
+    .our-agents-list-item {
+      &__info {
+        @include col(1/3);
+        width: 33.3333333333333333%;
+        height: 396px;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .agent-img {
+        width: 138px;
+        height: 138px;
+      }
+
+      .agent-title {
+        width: calc(100% - 180px);
+        padding-top: 45px;
+      }
+    }
+
+  }
+}

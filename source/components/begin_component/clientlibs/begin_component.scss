@@ -1,0 +1,125 @@
+.begin-component {
+
+	@include cf;
+  @include contain-width();
+  @include webfont(20px, $book);
+  direction: rtl;
+  background-image: url('../img/content/img100.jpg');
+  background-size: cover;
+  color: $eir-white;
+
+  &__inner {
+    @include cf;
+    background-color: rgba($eir-blue-dark, 0.8);
+  }
+
+  .begin-component-content {
+    @include box-sizing(border-box);
+    @include col(11/12, $offset: 0.5/12);
+    min-height: 658px;
+    padding-top: 60px;
+
+    h1 {
+      color: $eir-green;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+
+  .begin-component-list {
+    @include cf;
+    padding-bottom: 60px;
+  }
+
+  .begin-component-item {
+    @include cf;
+    position: relative;
+    padding-top: 150px;
+    text-align: center;
+
+    &:before {
+      @include pseudo-content;
+      @include center-x();
+      top: 50px;
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+
+    &.check-ico {
+      &:before {
+        width: 72px;
+        height: 64px;
+        background-image: url('../img/check-ico.svg');
+      }
+    }
+
+    &.list-ico {
+      &:before {
+        width: 51px;
+        height: 68px;
+        background-image: url('../img/list-ico.svg');
+      }
+    }
+
+    &.person-ico {
+      &:before {
+        width: 58px;
+        height: 58px;
+        background-image: url('../img/person-ico.svg');
+      }
+    }
+  }
+
+  .btn-block {
+    text-align: center;
+  }
+
+  .begin-component-btn {
+    @include global-button($padding-t-b: 20px, $padding-l-r: 50px, $b-radius: 0px, $bg-color: $eir-yellow, $font-size: 24px, $border-color: transparent, $color: $eir-blue-dark);
+    @include webfont(24px, $bold);
+    margin-bottom: 50px;
+    padding-bottom: 14px;
+    &:hover {
+      background-color: $eir-blue-dark;
+      color: $eir-white;
+    }
+  }
+
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+  .begin-component {
+
+    .begin-component-item {
+      @include col(1/3, $gutter: 4);
+      padding-top: 190px;
+
+      &:before {
+        top: 90px;
+      }
+    }
+
+  }
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up) {
+  .begin-component {
+
+    .begin-component-item {
+      @include col(1/3, $gutter: 4);
+      padding-top: 190px;
+
+      &:before {
+        top: 90px;
+      }
+    }
+
+  }
+}

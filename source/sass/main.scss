@@ -1,0 +1,32 @@
+// Vars, Mixins, Etc.
+@import "core/all";
+
+//temp for development
+// @include edit();
+
+// Global Components
+@import "../components/main_header/clientlibs/main_header";
+@import "../components/main_menu/clientlibs/main_menu";
+@import "../components/map_component/clientlibs/map_component";
+@import "../components/contact_us_component/clientlibs/contact_us_component";
+@import "../components/thumbs_slider_component/clientlibs/thumbs_slider_component";
+@import "../components/top_slider_component/clientlibs/top_slider_component";
+@import "../components/product_table_component/clientlibs/product_table_component";
+@import "../components/begin_component/clientlibs/begin_component";
+@import "../components/product_list_component/clientlibs/product_list_component";
+@import "../components/home_content_component/clientlibs/home_content_component";
+@import "../components/bottom_slider_component/clientlibs/bottom_slider_component";
+@import "../components/about_component/clientlibs/about_component";
+@import "../components/success_stories_component/clientlibs/success_stories_component";
+@import "../components/contact_agent_component/clientlibs/contact_agent_component";
+@import "../components/resident_property_component/clientlibs/resident_property_component";
+@import "../components/property_component/clientlibs/property_component";
+@import "../components/property_popup_component/clientlibs/property_popup_component";
+@import "../components/signup_popup_component/clientlibs/signup_popup_component";
+@import "../components/setting_popup_component/clientlibs/setting_popup_component";
+@import "../components/success_popup_component/clientlibs/success_popup_component";
+@import "../components/apply_popup_component/clientlibs/apply_popup_component";
+@import "../components/blog_component/clientlibs/blog_component";
+@import "../components/our_agents_component/clientlibs/our_agents_component";
+@import "../components/career_component/clientlibs/career_component";
+@import "../components/footer_component/clientlibs/footer_component";

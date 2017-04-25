@@ -1,0 +1,191 @@
+.signup-popup-component {
+	@include cf;
+  direction: rtl;
+  display: none;
+  z-index: 3000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: $eir-gray-dark;
+
+  &__inner {
+    @include cf;
+    @include center-xy;
+    @include box-sizing(border-box);
+    width: 100%;
+    background-image: url('../img/content/img100.jpg');
+    background-size: cover;
+    color: $eir-white;
+    border: solid $eir-yellow 1px;
+  }
+
+  .close-popup-btn {
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    margin: 20px;
+    left: 0;
+  }
+
+  .signup-popup-info-container {
+    @include cf;
+    @include box-sizing(border-box);
+    background-color: rgba($eir-blue-dark, 0.8);
+
+    &--header {
+      position: relative;
+      padding: 60px 0 60px 0;
+      border-bottom: solid $eir-yellow 1px;
+      text-align: center;
+
+      &:after {
+        @include pseudo-content;
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        right: 20px;
+        top: 20px;
+        bottom: 0;
+        background-image: url('../img/person-ico.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      h3 {
+        @include webfont(30px, $bold);
+        margin-bottom: 10px;
+        color: $eir-white;
+      }
+
+      p {
+        @include webfont(20px, $book);
+        margin-bottom: 10px;
+        padding: 0 20px;
+        line-height: 22px;
+        color: $eir-white;
+      }
+    }
+
+    &--form {
+      @include cf;
+      padding: 80px 0 80px 0;
+      text-align: center;
+
+      .btn {
+        @include box-sizing(border-box);
+        @include global-button($padding-t-b: 10px, $padding-l-r: 0, $b-radius: 0px, $bg-color: $eir-blue-light, $font-size: 20px, $border-color: transparent, $color: $eir-white);
+        width: 197px;
+        height: 45px;
+        margin: 0 auto;
+        padding: 12px 0 10px 0;
+        border: none;
+        vertical-align: top;
+        &:hover {
+          background-color: $eir-white;
+          color: $eir-blue-light;
+        }
+      }
+
+      .input-block {
+        width: 197px;
+        margin: 0 auto;
+
+        input {
+          @include global-input($padding-t-b: 8px, $padding-l-r: 10px, $b-radius: 0px, $bg-color: $eir-white, $font-size: 20px, $border-color: transparent, $color: $eir-black);
+          width: 100%;
+          margin-bottom: 3px;
+          padding: 10px 10px 6px 10px;
+          text-align: center;
+        }
+      }
+    }
+
+  }
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+	.signup-popup-component {
+
+    &__inner {
+      @include center-xy;
+      width: auto;
+    }
+
+    .signup-popup-info-container {
+      width: 750px;
+
+      &--header {
+        &:after {
+          position: relative;
+          display: inline-block;
+          width: 58px;
+          height: 58px;
+          right: 0;
+          top: 0;
+          bottom: 0;
+        }
+      }
+
+      &--form {
+        .btn {
+          display: inline-block;
+          width: 100px;
+          height: 140px;
+          padding: 12px 0 10px 0;
+        }
+
+        .input-block {
+          display: inline-block;
+        }
+      }
+
+    }
+
+	}
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up) {
+	.signup-popup-component {
+
+    &__inner {
+      @include center-xy;
+      width: auto;
+    }
+
+    .signup-popup-info-container {
+      width: 750px;
+
+      &--header {
+        &:after {
+          position: relative;
+          display: inline-block;
+          width: 58px;
+          height: 58px;
+          right: 0;
+          top: 0;
+          bottom: 0;
+        }
+      }
+
+      &--form {
+        .btn {
+          display: inline-block;
+          width: 100px;
+          height: 140px;
+          padding: 12px 0 10px 0;
+        }
+
+        .input-block {
+          display: inline-block;
+        }
+      }
+
+    }
+
+	}
+}

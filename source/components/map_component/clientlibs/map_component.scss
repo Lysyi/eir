@@ -1,0 +1,11 @@
+#map-canvas {
+  @include cf;
+  @include full-width;
+  height: 460px;
+}
+
+.map-component {
+  @include cf;
+  @include full-width;
+  background-color: $eir-gray-light;
+}

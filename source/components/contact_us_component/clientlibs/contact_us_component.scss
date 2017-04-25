@@ -1,0 +1,143 @@
+.contact-us-component {
+
+	@include cf;
+  direction: rtl;
+  padding-bottom: 40px;
+
+  &__inner {
+    @include cf;
+    @include contain-width();
+    background-color: $eir-white;
+  }
+
+  .contact-us-component-content {
+    @include cf;
+    @include box-sizing(border-box);
+
+    &__inner {
+      @include col(9.6/12, $offset: 1.2/12);
+    }
+  }
+
+  .contact-us-component-info {
+    @include cf;
+    @include box-sizing(border-box);
+    @include webfont(18px, $book);
+    padding: 40px 0 0 0;
+    color: $eir-blue-dark;
+
+    .contact-us-phone, .contact-us-location, .contact-us-email, .contact-us-time {
+      padding: 0 30px 0 0;
+      &:hover {
+        text-decoration: none;
+      }
+      &:before {
+        @include pseudo-content;
+        @include circle-element;
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    a {
+      @include webfont(18px, $book);
+      position: relative;
+      display: inline-block;
+      margin-bottom: 5px;
+      color: $eir-blue-dark;
+    }
+
+    &---list {
+      margin: 0 0 40px 0;
+    }
+
+    &---title {
+      @include webfont(28px, $bold);
+
+      color: $eir-green;
+    }
+  }
+
+  &--form {
+    @include cf;
+    @include box-sizing(border-box);
+    padding: 40px 0 45px 0;
+    background-color: $eir-blue-dark;
+
+    &---title {
+      @include webfont(28px, $bold);
+      margin: 0 0 30px 0;
+      color: $eir-yellow;
+    }
+  }
+
+  &--input[type="text"] {
+    @include box-sizing(border-box);
+    @include full-width();
+    height: 57px;
+    margin: 0 0 30px 0;
+    padding: 0 15px;
+  }
+
+  &--txtarea {
+    @include box-sizing(border-box);
+    @include full-width();display: block;
+    height: 210px;
+    margin: 0 0 30px 0;
+    padding: 15px;
+  }
+
+  &--btn {
+    @include box-sizing(border-box);
+    @include global-button($padding-t-b: 10px, $padding-l-r: 50px, $b-radius: 0px, $bg-color: $eir-green, $font-size: 20px, $border-color: transparent, $color: $eir-white);
+    @include webfont(20px, $bold);
+    @include col(12/12);
+    padding-bottom: 7px;
+    &:hover {
+      background-color: $eir-white;
+      color: $eir-green;
+    }
+  }
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+  .contact-us-component {
+
+    .contact-us-component-info, &--form {
+      @include cf;
+      @include col(6/12);
+      padding: 75px 0 55px 0;
+
+      &---list {
+        margin: 0 0 60px 0;
+      }
+    }
+
+  }
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up)  {
+  .contact-us-component {
+
+    .contact-us-component-info, &--form {
+      @include cf;
+      @include col(6/12);
+      padding: 75px 0 55px 0;
+
+      &---list {
+        margin: 0 0 60px 0;
+      }
+    }
+
+    &--btn {
+      @include col(6/12);
+      float: left;
+    }
+
+  }
+}
+

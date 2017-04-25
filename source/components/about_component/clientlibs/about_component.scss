@@ -1,0 +1,86 @@
+.about-component {
+
+	@include cf;
+  @include contain-width();
+  @include webfont(18px, $book);
+  direction: rtl;
+  background-color: $eir-gray-light;
+  margin: 0 0 40px 0;
+
+  &__inner {
+    @include cf;
+  }
+
+  .about-component-content {
+    @include cf;
+    @include box-sizing(border-box);
+    position: relative;
+    padding-bottom: 20px;
+
+    &--title {
+      background-color: rgba($eir-blue, 0.8);
+      margin-bottom: 0;
+      padding: 20px 0 15px 0;
+      color: $eir-white;
+      text-align: center;
+    }
+
+    &--img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &--text {
+      @include col(11/12, $offset: 0.5/12);
+      text-align: justify;
+    }
+
+  }
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+  .about-component {
+    @include webfont(21px, $book);
+    margin-top: 50px;
+
+    .about-component-content {
+      padding-bottom: 90px;
+      &--title {
+        @include center-x(60%);
+        margin-top: -50px;
+        padding: 30px 0 25px 0;
+      }
+
+      &--img {
+        margin-bottom: 100px;
+      }
+    }
+
+  }
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up)  {
+  .about-component {
+    @include webfont(21px, $book);
+    margin-top: 50px;
+
+    .about-component-content {
+      padding-bottom: 90px;
+      &--title {
+        @include center-x(60%);
+        margin-top: -50px;
+        padding: 30px 0 25px 0;
+      }
+
+      &--img {
+        margin-bottom: 100px;
+      }
+    }
+
+  }
+}
+

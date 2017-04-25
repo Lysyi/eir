@@ -1,0 +1,144 @@
+{
+    "home": {
+        "path_to_layout": "source/pages/home/home.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "home"
+            }, {
+                "source/data/alt_classes.json": "home"
+            }
+        ]
+    },
+
+    "all-components": {
+        "path_to_layout": "source/pages/all-components/all-components.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "all-components"
+            }, {
+                "source/data/alt_classes.json": "all-components"
+            }
+        ]
+    },
+
+    "all-popups": {
+        "path_to_layout": "source/pages/all-popups/all-popups.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "all-popups"
+            }, {
+                "source/data/alt_classes.json": "all-popups"
+            }
+        ]
+    },
+
+    "page3-about": {
+        "path_to_layout": "source/pages/page3-about/page3-about.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "page3-about"
+            }, {
+                "source/data/alt_classes.json": "page3-about"
+            }
+        ]
+    },
+
+    "page4-success-stories": {
+        "path_to_layout": "source/pages/page4-success-stories/page4-success-stories.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "page4-success-stories"
+            }, {
+                "source/data/alt_classes.json": "page4-success-stories"
+            }
+        ]
+    },
+
+    "page5-agent": {
+        "path_to_layout": "source/pages/page5-agent/page5-agent.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "page5-agent"
+            }, {
+                "source/data/alt_classes.json": "page5-agent"
+            }
+        ]
+    },
+
+    "page6-properties": {
+        "path_to_layout": "source/pages/page6-properties/page6-properties.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "page6-properties"
+            }, {
+                "source/data/alt_classes.json": "page6-properties"
+            }
+        ]
+    },
+
+    "page7-property": {
+        "path_to_layout": "source/pages/page7-property/page7-property.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "page7-property"
+            }, {
+                "source/data/alt_classes.json": "page7-property"
+            }
+        ]
+    },
+
+    "page9-contact": {
+        "path_to_layout": "source/pages/page9-contact/page9-contact.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "page9-contact"
+            }, {
+                "source/data/alt_classes.json": "page9-contact"
+            }
+        ]
+    },
+
+    "page10-blog": {
+        "path_to_layout": "source/pages/page10-blog/page10-blog.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "page10-blog"
+            }, {
+                "source/data/alt_classes.json": "page10-blog"
+            }
+        ]
+    },
+
+    "page11-single-post": {
+        "path_to_layout": "source/pages/page11-single-post/page11-single-post.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "page11-single-post"
+            }, {
+                "source/data/alt_classes.json": "page11-single-post"
+            }
+        ]
+    },
+
+    "page12-agents": {
+        "path_to_layout": "source/pages/page12-agents/page12-agents.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "page12-agents"
+            }, {
+                "source/data/alt_classes.json": "page12-agents"
+            }
+        ]
+    },
+
+    "page13-jobs": {
+        "path_to_layout": "source/pages/page13-jobs/page13-jobs.ejs",
+        "path_to_data": [
+            "source/data/global.json", {
+                "source/data/meta.json": "page13-jobs"
+            }, {
+                "source/data/alt_classes.json": "page13-jobs"
+            }
+        ]
+    }
+}

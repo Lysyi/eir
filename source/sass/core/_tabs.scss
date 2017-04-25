@@ -1,0 +1,43 @@
+// Tabs
+.tabs {
+    list-style: none;
+    display: block;
+    padding: 0;
+    margin: 0;
+
+    float: none; // Note: this is needed because in one of the common.css files currently on CTC .tabs are set to float: left
+
+    .tab-nav-item {
+        display: inline-block;
+    }
+
+    .tab-nav-item:hover,
+    .tab-nav-item.active {
+        .tab-nav-link {
+            color: #cc0000;
+            text-decoration: none;
+        }
+    }
+}
+
+.tabs-content {
+    display: block;
+    margin-bottom: 0;
+    padding: 0;
+    
+    & > li {
+        display: none;
+    }
+
+    & > li.active {
+        display: block;
+    }
+}
+
+.tabs-content > .content {
+    padding: 0;
+}
+
+.no-js .tabs-content > li {
+    display: block;
+}

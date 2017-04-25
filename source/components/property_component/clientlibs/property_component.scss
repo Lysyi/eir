@@ -1,0 +1,358 @@
+.property-component {
+
+	@include cf;
+  @include contain-width();
+  margin: 0 0 40px 0;
+
+  &__inner {
+    @include cf;
+    background-color: $eir-gray-light;
+  }
+
+  &__info {
+    @include cf;
+    @include box-sizing(border-box);
+    position: relative;
+    direction: rtl;
+    background-image: url('../img/content/img100.jpg');
+    background-size: cover;
+    color: $eir-white;
+
+    &--bg {
+      @include cf;
+      @include box-sizing(border-box);
+      padding-top: 40px;
+      padding-bottom: 70px;
+      background-color: rgba($eir-blue-dark, 0.8);
+    }
+
+    &--inner {
+      @include col(9.6/12, $offset: 1.2/12);
+    }
+
+    h3 {
+      @include webfont(25px, $bold);
+      margin-bottom: 25px;
+      color: $eir-white;
+      span {
+        @include webfont(20px, $bold);
+        color: $eir-white;
+      }
+    }
+
+    .info {
+      @include webfont(17px, $bold);
+      display: block;
+      margin: 5px 0 15px 0;
+      padding: 0 65px 0 0;
+      line-height: 20px;
+      i {
+        @include webfont(14px, $book);
+        display: block;
+      }
+    }
+
+    &--btn-block {
+      @include cf;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      .btn{
+        &:first-child {
+          border-left: solid $eir-blue-light 1px;
+        }
+        @include col(1/2);
+        @include box-sizing(border-box);
+        @include global-button($padding-t-b: 10px, $padding-l-r: 0, $b-radius: 0px, $bg-color: $eir-blue-dark, $font-size: 15px, $border-color: transparent, $color: $eir-white);
+        height: 57px;
+        padding-bottom: 15px;
+        &:hover {
+          background-color: $eir-white;
+          color: $eir-blue;
+        }
+        span {
+          position: relative;
+          display: inline-block;
+          top: 6px;
+          margin: 0 10px 0 0;
+        }
+      }
+    }
+  }
+
+  .property-slider-container {
+    position: relative;
+    background-color: $eir-blue-light;
+
+    .property-slider-navigation {
+      @include col(11.5/12, $offset: 0.25/12);
+      @include center-xy();
+      z-index: 10;
+      .prev, .next {
+        display: inline-block;
+        width: 23px;
+        height: 44px;
+        margin-left: 0;
+      }
+      .next {
+        @include transform(rotate(-180deg));
+        float: right;
+      }
+    }
+
+    .property-slider-carousel {
+      overflow: hidden;
+      &__item {
+        @include cf;
+        position: relative;
+        direction: rtl;
+      }
+    }
+
+    .property-slider__image {
+      position: relative;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__content {
+    @include cf;
+    @include full-width();
+    direction: rtl;
+    background-color: $eir-blue-light;
+
+    &--user {
+      @include cf;
+      background-color: $eir-blue-light;
+
+      &--agent-block {
+        @include col(9.6/12, $offset: 1.2/12);
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        .agent-title {
+          float: left;
+          width: calc(100% - 110px);
+          margin-bottom: 40px;
+          padding-top: 15px;
+          color: $eir-white;
+          span {
+            @include webfont(18px, $book);
+            margin-bottom: 10px;
+            color: $eir-yellow;
+          }
+        }
+
+        .agent-fbook {
+          @include circle-element;
+          display: inline-block;
+        }
+
+        .agent-img {
+          @include border-radius(150px);
+          position: relative;
+          width: 90px;
+          height: 90px;
+          margin-bottom: 40px;
+          border: solid $eir-white 2px;
+        }
+
+        .agent-phone, .agent-location {
+          display: block;
+          &:hover {
+            text-decoration: none;
+          }
+          &:before {
+            @include pseudo-content;
+            @include circle-element;
+            display: inline-block;
+            position: relative;
+            top: 5px;
+            margin: 0 0 0 10px;
+          }
+        }
+
+        .agent-fbook, .agent-phone, .agent-location {
+          @include webfont(18px, $book);
+          position: relative;
+          margin-bottom: 5px;
+          color: $eir-white;
+        }
+
+        .btn-block {
+          padding-top: 10px;
+          text-align: center;
+        }
+
+        .btn {
+          @include global-button($padding-t-b: 10px, $padding-l-r: 55px, $b-radius: 0px, $bg-color: $eir-green, $font-size: 20px, $border-color: transparent, $color: $eir-white);
+          @include webfont(20px, $bold);
+          padding-top: 15px;
+          &:hover {
+            @include global-button($padding-t-b: 10px, $padding-l-r: 55px, $b-radius: 0px, $bg-color: $eir-white, $font-size: 20px, $border-color: transparent, $color: $eir-green);
+            @include webfont(20px, $bold);
+            padding-top: 15px;
+          }
+        }
+      }
+    }
+
+    &--text {
+      @include box-sizing(border-box);
+      @include cf;
+      background-color: $eir-gray-normal;
+
+      &---block {
+        @include col(10.2/12, $offset: 0.8/12);
+        padding-top: 40px;
+        padding-bottom: 30px;
+      }
+
+      h3 {
+        @include webfont(25px, $bold);
+        margin-bottom: 20px;
+        color: $eir-blue-light;
+      }
+
+      p {
+        @include webfont(16px, $book);
+        margin-bottom: 15px;
+        text-align: justify;
+        color: $eir-black;
+      }
+    }
+  }
+
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+	.property-component {
+
+    &__info {
+      @include col(5.3/12);
+
+      &--bg {
+        height: 480px;
+      }
+
+      &--btn-block {
+        .btn{
+          @include col(1/1);
+          border-top: solid $eir-blue-light 1px;
+          &:first-child {
+            border-left: none;
+          }
+        }
+      }
+    }
+
+    .property-slider-container {
+      @include col(6.7/12);
+
+      .property-slider-navigation {
+        @include contain-width();
+      }
+
+      .property-slider__image {
+        position: relative;
+        height: 480px;
+        img {
+          width: 170%;
+        }
+      }
+    }
+
+    &__content {
+      &--user {
+        @include col(5.3/12);
+
+        .agent-img {
+          width: 138px;
+          height: 138px;
+        }
+
+        .agent-title {
+          width: calc(100% - 180px);
+          padding-top: 45px;
+        }
+      }
+
+      &--text {
+        @include col(6.7/12);
+        min-height: 420px;
+
+        &---block {
+          padding-top: 80px;
+          padding-bottom: 55px;
+        }
+      }
+    }
+
+	}
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up) {
+	.property-component {
+
+    &__info {
+      @include col(3.8/12);
+
+      &--bg {
+        height: 510px;
+      }
+    }
+
+    .property-slider-container {
+
+      @include col(8.2/12);
+
+      .property-slider-navigation {
+        .prev, .next {
+          width: 46px;
+          height: 88px;
+        }
+      }
+
+      .property-slider__image {
+        position: relative;
+        height: 510px;
+        img {
+          width: 120%;
+        }
+      }
+    }
+
+    &__content {
+      &--user {
+        @include col(3.8/12);
+
+        .agent-img {
+          width: 138px;
+          height: 138px;
+        }
+
+        .agent-title {
+          width: calc(100% - 180px);
+          padding-top: 45px;
+        }
+      }
+
+      &--text {
+        @include col(8.2/12);
+        min-height: 420px;
+
+        &---block {
+          padding-top: 80px;
+          padding-bottom: 55px;
+        }
+      }
+    }
+
+	}
+}

@@ -1,0 +1,384 @@
+// Width/Height
+@mixin full-width {
+    width: 100%;
+}
+
+@mixin contain-width {
+    // center using jeet, argument is max-width
+    @include breakpoint($bp-tablet) {
+        // @include center(729px);
+        // @include center(94.92%); // 0.9492 = 729 / 768
+        @include center(98%); // 0.9492 = 729 / 768
+        width: 100%;
+    }
+
+    @include breakpoint($bp-desktop) {
+        // @include center(96.87%); // 0.9687 = 992 / 1024
+        @include center(1140px);
+        width: 100%;
+    }
+
+    @include breakpoint($bp-desktop-large) {
+        @include center(1170px);
+        width: 100%;
+    }
+}
+
+@mixin min-width {
+    @include breakpoint($bp-desktop-large) {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+// Positioning
+@mixin center-x($width: "auto") {
+    position: absolute;
+    left: 50%;
+
+    // if width is unknown
+    @if $width == "auto" {
+        @include translateX(-50%);
+    }
+
+    // else
+    @if $width != "auto" {
+        width: $width;
+        margin-left: -($width / 2); // calculate offset
+    }
+}
+
+@mixin center-y($height: "auto") {
+    position: absolute;
+    top: 50%;
+
+    // if height is unknown
+    @if $height == "auto" {
+        @include translateY(-50%);
+    }
+
+    // else
+    @if $height != "auto" {
+        height: $height;
+        margin-top: -($height / 2); // calculate offset
+    }
+}
+
+@mixin center-xy() {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include transform(translateY(-50%) translateX(-50%));
+}
+
+
+
+// Fonts
+// px to rem converter
+// @mixin px-to-rem($px-value) {
+//     font-size: ($px-value / 16px) * 1rem;
+// }
+// Color, Size, Family
+@mixin webfont($size: 16px, $weight: 300, $style: normal) {
+    font-family: "fbronibe", "Trebuchet MS", Ubuntu, serif;
+
+    // @if unitless($size) {
+    //     $size: ($size * 1px);
+    // }
+
+    // @include px-to-rem($size);
+    font-size: $size;
+    font-style: $style;
+    font-weight: $weight;
+}
+
+// Photoshop Helpers
+// http://www.demacmedia.com/magento-commerce/magento-tutorials/mini-tutorial-accurately-translating-photoshop-values-css/
+
+// letter-spacing (in ems) = tracking / 1000
+@mixin ps-letter-spacing($tracking: 0) {
+    letter-spacing: ($tracking / 1000) * 1em;
+}
+
+// line-height (as a percentage of the current font size) = 100 * (leading point size / font size)
+// use for percentage based line-height cases
+@mixin ps-line-height($leading-point-size, $font-size: 16px) {
+    line-height: ($leading-point-size / $font-size) * 100%;
+}
+
+// Pseudo Graphics
+@mixin triangle($color: #000, $height: 1em, $width: 1em, $angle: 0) {
+    @if nth($angle, 1) == "top" or nth($angle, 1) == "bottom" {
+        $angle: "#{$angle}";
+    }
+
+    @if $angle == "top" {
+        $angle: 0;
+    }
+    @if $angle == "top right" {
+        $angle: 45 * 7;
+    }
+    @if $angle == "right" {
+        $angle: 45 * 2;
+    }
+    @if $angle == "bottom right" {
+        $angle: 45 * 1;
+    }
+    @if $angle == "bottom" {
+        $angle: 45 * 4;
+    }
+    @if $angle == "bottom left" {
+        $angle: 45 * 3;
+    }
+    @if $angle == "left" {
+        $angle: 45 * 6;
+    }
+    @if $angle == "top left" {
+        $angle: 45 * 5;
+    }
+
+    @if unit($height) == "" or unit($height) == "%" {
+        @debug "in triangle #{$height} is not a compatable unit for height.";
+    }
+
+    @if unit($width) == "" or unit($width) == "%" {
+        @debug "in triangle #{$width} is not a compatable unit for width.";
+    }
+
+    // offset 45deg to make each side start at 0
+    $deg: $angle + 45;
+    // if units, remove units
+    @if unit($deg) == deg {
+        $deg: $deg / 1deg;
+    }
+    // shift to be on a scale from 0 to 90.
+    @while $deg > 90 {
+        $deg: $deg - 90;
+    }
+    @while $deg < 0 {
+        $deg: $deg + 90;
+    }
+    // Get a ratio of 90 to multiply by.
+    $deg: $deg / 90;
+
+    // make sure metrics are reset
+    display: block;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+
+    // run through sides
+    @if $angle <= 45 or $angle > 315 {
+        border-bottom-color: $color;
+        border-width: 0 ($width * abs($deg - 1)) $height ($width * $deg);
+    }
+    @if $angle > 45 and $angle <= 135 {
+        border-left-color: $color;
+        border-width: ($height * $deg) 0 ($height * abs($deg - 1)) $width;
+    }
+    @if $angle > 135 and $angle <= 225 {
+        border-top-color: $color;
+        border-width: $height ($width * $deg) 0 ($width * abs($deg - 1));
+    }
+    @if $angle > 225 and $angle <= 315 {
+        border-right-color: $color;
+        border-width: ($height * abs($deg - 1)) $width ($height * $deg) 0;
+    }
+}
+
+// Color is required
+@mixin center-rule($color, $style: solid, $width: 100%, $height: 1px) {
+    position: relative;
+
+    // when parent background is solid/filled
+    @if $style == solid {
+        &:after {
+            @include pseudo-content;
+            @include center-y($height);
+            background-color: $color;
+            height: $height;
+            left: 0;
+            position: absolute;
+            width: $width;
+            z-index: 1;
+        }
+    }
+
+    // when parent background needs to be transparent
+    @if $style == separate {
+        &:before,
+        &:after {
+            @include pseudo-content;
+            @include center-y($height);
+            background-color: $color;
+            height: $height;
+            position: absolute;
+            width: $width;
+            z-index: 1;
+        }
+
+        &:before {
+            left: 0;
+        }
+
+        &:after {
+            right: 0;
+        }
+    }
+}
+
+
+
+// Other
+@mixin half-native-size {
+    @include transform(scale(0.5));
+}
+
+@mixin pseudo-content {
+    content: '';
+    display: block;
+}
+
+@mixin hide {
+    position: absolute;
+    left: -9999px;
+}
+
+@mixin image-replacement {
+    display: block;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+@mixin inline-icon-wrapper($height) {
+    display: block;
+    height: $height;
+    overflow: hidden;
+}
+
+@mixin inline-icon {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+@mixin focus-state {
+    &:focus {
+        outline: 1px solid $focus-blue;
+    }
+}
+
+@mixin input-placeholder($color, $input-height, $size: 16px, $weight: 400, $style: normal, $opacity: 1) {
+
+    line-height: $input-height;
+    -webkit-font-smoothing: antialiased; // RB - consider folding this in to webfont mixin
+
+    &::-webkit-input-placeholder {
+        color: $color;
+        font-family: $lato;
+        @include px-to-rem($size);
+        font-style: $style;
+        font-weight: $weight;
+        line-height: $input-height;
+        opacity: $opacity;
+    }
+
+    &::-moz-placeholder {
+        color: $color;
+        font-family: $lato;
+        @include px-to-rem($size);
+        font-style: $style;
+        font-weight: $weight;
+        line-height: $input-height;
+        opacity: $opacity;
+    }
+
+    &:-moz-placeholder {
+        color: $color;
+        font-family: $lato;
+        @include px-to-rem($size);
+        font-style: $style;
+        font-weight: $weight;
+        line-height: $input-height;
+        opacity: $opacity;
+    }
+
+    &:-ms-input-placeholder {
+        color: $color;
+        font-family: $lato;
+        @include px-to-rem($size);
+        font-style: $style;
+        font-weight: $weight;
+        line-height: $input-height;
+        opacity: $opacity;
+    }
+
+    &.placeholder {
+        color: $color;
+        font-family: $lato;
+        @include px-to-rem($size);
+        font-style: $style;
+        font-weight: $weight;
+        line-height: $input-height;
+        opacity: $opacity;
+    }
+}
+
+@mixin clear-button {
+    border: 0;
+    background: none;
+    padding: 0;
+    margin: 0;
+    &:hover {
+        color: $ctc-red-hover;
+    }
+}
+
+@mixin global-input($padding-t-b: 18px, $padding-l-r: 18px, $b-radius: 3px, $bg-color: #454545, $font-size: 16px, $border-color: #fff, $color: #fff) {
+    @include border-radius($b-radius);
+    @include webfont($font-size, $book);
+    @include box-sizing(border-box);
+    @include ps-line-height(20px);
+    padding: $padding-t-b $padding-l-r;
+    color: $color;
+    border: 2px solid $border-color;
+    background-color: $bg-color;
+}
+
+@mixin global-button($padding-t-b: 18px, $padding-l-r: 18px, $b-radius: 3px, $bg-color: $eir-blue, $font-size: 16px, $border-color: #fff, $color: #fff) {
+    @include border-radius($b-radius);
+    @include webfont($font-size, $book);
+    @include box-sizing(border-box);
+    @include ps-line-height(20px);
+    padding: $padding-t-b $padding-l-r;
+    color: $color;
+    border: 2px solid $border-color;
+    background-color: $bg-color;
+}
+
+// Should create mix !!
+@mixin arrow-label ($bg-color: $eir-blue-light) {
+    @include global-button($padding-t-b: 4px, $padding-l-r: 8px, $b-radius: 0px, $bg-color: $bg-color, $font-size: 12px, $border-color: transparent, $color: $eir-white);
+    display: inline-block;
+    position: relative;
+    margin-bottom: 25px;
+    padding-bottom: 1px;
+    &:before {
+        @include pseudo-content;
+        @include triangle($color: $bg-color, $height: 1em, $width: 1em, $angle: left);
+        position: absolute;
+        border-width: 12px 12px 12px 0;
+        top: -2px;
+        left: -14px;
+    }
+}
+
+@mixin circle-element($width: 20px, $height: 20px, $bg-color: transparent, $b-radius: 20px) {
+    @include border-radius($b-radius);
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+}

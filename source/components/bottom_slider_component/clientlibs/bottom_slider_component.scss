@@ -1,0 +1,131 @@
+.bottom-slider-component {
+
+	@include cf;
+  @include webfont(13px, $book);
+
+  &__inner {
+    @include cf;
+    @include contain-width();
+    @include box-sizing(border-box);
+    min-height: 346px;
+	  padding: 50px 0 25px 0;
+	  background-color: $eir-gray;
+	  border-top: solid $eir-gray-dark 2px;
+  }
+
+  .owl-bottom-slider-navigation {
+  	@include col(5.5/12, $gutter: 0.5/12);
+    @include box-sizing(border-box);
+		margin-bottom: 40px;
+		.prev, .next {
+			display: inline-block;
+      margin-left: 0;
+      margin-right: 20px;
+		}
+		.next {
+			@include transform(rotate(-180deg));
+		}
+  }
+
+  .owl-bottom-slider-title {
+  	@include col(5.5/12, $offset: 0.5/12);
+    @include box-sizing(border-box);
+  	direction: rtl;
+  	color: $eir-blue-dark;
+  }
+
+	.owl-bottom-slider-carousel {
+		@include col(11/12, $offset: 0.5/12);
+		overflow: hidden;
+
+		&__item{
+			@include cf;
+			direction: rtl;
+		}
+	}
+
+	.bottom-slider__text {
+		@include contain-width();
+		margin-bottom: 30px;
+
+		h3 {
+	    color: $eir-blue-dark;
+	    margin-bottom: 3px;
+	  }
+
+    .arrow-label {
+      @include arrow-label;
+    }
+	}
+
+	.bottom-slider__image {
+		margin-bottom: 30px;
+		.star-icon {
+			position: absolute;
+		}
+	}
+
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+	.bottom-slider-component {
+
+    .owl-bottom-slider-navigation {
+      padding: 0 0 0 10px;
+    }
+
+    .owl-bottom-slider-title {
+      padding: 0 10px 0 0;
+    }
+
+    .owl-bottom-slider-carousel {
+      &__item{
+        margin: 0 10px;
+      }
+    }
+
+		.bottom-slider__text {
+			@include full-width();
+		}
+
+		.bottom-slider__image {
+			@include full-width();
+		}
+
+	}
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up) {
+	.bottom-slider-component {
+
+    .owl-bottom-slider-navigation {
+      padding: 0 0 0 10px;
+    }
+
+    .owl-bottom-slider-title {
+      padding: 0 10px 0 0;
+    }
+
+    .owl-bottom-slider-carousel {
+      &__item{
+        margin: 0 10px;
+      }
+    }
+
+		.bottom-slider__text {
+			@include col(5.1/12, $offset: 0.4/12);
+		}
+
+		.bottom-slider__image {
+			@include col(6.5/12);
+		}
+
+	}
+}
+
+
+

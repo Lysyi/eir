@@ -1,0 +1,22 @@
+// Font-Face
+
+
+// Book
+@font-face {
+    font-family: 'FbRonibe';
+    src:
+        url('../fonts/fbronibe-light-webfont.woff2') format('woff2'), /* Chrome 26+, Opera 23+ */
+        url('../fonts/fbronibe-light-webfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-weight: 300;
+    font-style: normal;
+}
+
+// Bold
+@font-face {
+    font-family: 'FbRonibe';
+    src:
+        url('../fonts/fbronibe-bold-webfont.woff2') format('woff2'), /* Chrome 26+, Opera 23+ */
+        url('../fonts/fbronibe-bold-webfont.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    font-weight: 700;
+    font-style: normal;
+}

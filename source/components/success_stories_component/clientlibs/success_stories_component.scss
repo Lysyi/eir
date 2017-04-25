@@ -1,0 +1,149 @@
+.success-stories-component {
+
+	@include cf;
+  @include contain-width();
+  @include webfont(18px, $book);
+  direction: rtl;
+  margin: 0 0 40px 0;
+
+  &__inner {
+    @include cf;
+  }
+
+  .success-stories-component-content {
+    @include cf;
+    @include box-sizing(border-box);
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    background-color: $eir-gray-light;
+    text-align: center;
+
+    &--info {
+      @include cf;
+      @include col(11/12, $offset: 0.5/12);
+    }
+
+    &--title {
+      margin: 0 0 0 0;
+      padding: 20px 0 15px 0;
+      background-color: rgba($eir-blue, 0.8);
+      color: $eir-white;
+      text-align: center;
+    }
+
+    &--img {
+      width: 214px;
+      margin: 30px 0 20px 0;
+    }
+
+    &--text {
+      text-align: justify;
+    }
+  }
+
+  .pagginator-list {
+    text-align: center;
+    &__item {
+      @include webfont(20px, $book);
+      display: inline-block;
+      margin: 0 0 0 10px;
+      a {
+        width: 30px;
+        display: block;
+        padding: 6px 0 4px 0;
+        background-color: $eir-green;
+        color: $eir-white;
+        text-align: center;
+        &:hover, &.active {
+          background-color: $eir-white;
+          color: $eir-green;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+  .success-stories-component {
+    @include webfont(21px, $book);
+    margin-top: 50px;
+
+    .success-stories-component-content {
+      padding-top: 80px;
+      padding-bottom: 60px;
+
+      &--title {
+        @include center-x(60%);
+        margin-top: -130px;
+        padding: 30px 0 25px 0;
+      }
+
+      &--img {
+        float: right;
+        margin: 0 0 0 0;
+      }
+
+      &--text {
+        margin: 0 250px 0 0;
+      }
+    }
+
+    .pagginator-list {
+      text-align: right;
+      &__item {
+        a {
+          width: 60px;
+          padding: 12px 0 10px 0;
+        }
+      }
+    }
+
+  }
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up)  {
+  .success-stories-component {
+    @include webfont(21px, $book);
+    margin-top: 50px;
+
+    .success-stories-component-content {
+      padding-top: 80px;
+      padding-bottom: 60px;
+
+      &--title {
+        @include center-x(60%);
+        margin-top: -130px;
+        padding: 30px 0 25px 0;
+      }
+
+      &--img {
+        float: right;
+        margin: 0 0 0 0;
+      }
+
+      &--text {
+        margin: 0 250px 0 0;
+        padding-top: 30px;
+      }
+    }
+
+    .pagginator-list {
+      text-align: right;
+      &__item {
+        a {
+          width: 60px;
+          padding: 12px 0 10px 0;
+        }
+      }
+    }
+
+  }
+}
+

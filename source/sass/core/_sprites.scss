@@ -1,0 +1,450 @@
+/*
+ * Retina Sprites for Compass
+ * by:              Gaya Kessler
+ * last update:     03/11/14
+ *
+ * Usage:
+ * 1. create two folders in your image directory (in this case 'icons' and 'icons-2x').
+ * 2. adjust the foldernames defined below if you use different names.
+ * 3. create sprite images for pixel ratio 1 screens and put them in the first folder.
+ * 4. create sprite images for pixel ratio 2 screens and put them in the second folder, use the same filenames.
+ * 5. use the sprite-image in your Sass/Scss using: '@include use-sprite(<sprite-name>)'
+ */
+
+// first we'll define the folders where the sprites are and their layouts
+// $icons: sprite-map("icons/*.png", $spacing: 50px);
+// $icons-2x: sprite-map("icons-2x/*.png", $spacing: 100px);
+
+//Sprite mixin, works perfectly with standard defines
+// @mixin use-sprite($sprite, $bg-size: auto) {
+//     background-color: transparent;
+//     background-image: sprite-url($icons);
+//     background-position: sprite-position($icons, $sprite);
+//     background-repeat: no-repeat;
+
+//     @include breakpoint($bp-retina) {
+//         background-image: sprite-url($icons-2x);
+//         background-size: (image-width(sprite-path($icons-2x)) / 2) (image-height(sprite-path($icons-2x)) / 2);
+//         background-position: round(nth(sprite-position($icons-2x, $sprite), 1) / 2) round(nth(sprite-position($icons-2x, $sprite), 2) / 2);
+//     }
+
+//     // contain crops the sprite to it's image dimensions, use when used in pseudo element like :before or
+//     @if $bg-size == contain {
+//         overflow: hidden;
+//         display: block;
+//         height: image-height(sprite-file($icons, $sprite));
+//         width: image-width(sprite-file($icons, $sprite));
+
+//         @include breakpoint($bp-retina) {
+//             height: image-height(sprite-file($icons-2x, $sprite)) / 2;
+//             width: image-width(sprite-file($icons-2x, $sprite)) / 2;
+//         }
+//     }
+// }
+
+// icons
+
+.star-icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 15px;
+  background-image: url('../img/star-ico1.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.left-icon {
+  display: block;
+  width: 16px;
+  height: 30px;
+  margin-left: 20px;
+  background-image: url('../img/left-ico1.svg');
+  background-size: 100%;
+  background-position-x: 1px;
+  background-repeat: no-repeat;
+}
+
+.star-icon2 {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  margin: 20px 5px;
+  background-image: url('../img/star-ico2.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.lock-icon {
+  display: inline-block;
+  width: 20px;
+  height: 22px;
+  margin: 20px 5px;
+  background-image: url('../img/lock-ico.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+
+.bedrooms-ico {
+  position: relative;
+  padding: 0 55px 0 0;
+  &:before {
+    @include pseudo-content;
+    @include center-y();
+    position: absolute;
+    width: 50px;
+    height: 26px;
+    right: 0;
+    background-image: url('../img/gray-bed-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.bedrooms-ico2 {
+  position: relative;
+  padding: 0 75px 0 0;
+  &:before {
+    @include pseudo-content;
+    @include center-y();
+    position: absolute;
+    width: 68px;
+    height: 36px;
+    right: 0;
+    background-image: url('../img/yellow-bed-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.bedrooms-ico3 {
+  position: relative;
+  padding: 0 75px 0 0;
+  &:before {
+    @include pseudo-content;
+    @include center-y();
+    position: absolute;
+    width: 50px;
+    height: 26px;
+    right: 0;
+    background-image: url('../img/white-bed-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.surface-ico {
+  position: relative;
+  padding: 0 55px 0 0;
+  &:before {
+    @include pseudo-content;
+    @include center-y();
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    right: 10px;
+    background-image: url('../img/gray-arrow-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.surface-ico2 {
+  position: relative;
+  padding: 0 65px 0 0;
+  &:before {
+    @include pseudo-content;
+    @include center-y();
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    right: 0;
+    background-image: url('../img/yellow-arrow-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.surface-ico3 {
+  position: relative;
+  padding: 0 65px 0 0;
+  &:before {
+    @include pseudo-content;
+    @include center-y();
+    position: absolute;
+    width: 31px;
+    height: 31px;
+    right: 10px;
+    background-image: url('../img/white-arrow-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.shower-ico {
+  position: relative;
+  padding: 0 70px 0 0;
+  &:before {
+    @include pseudo-content;
+    @include center-y();
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    right: 0;
+    background-image: url('../img/yellow-shower-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.tab-ico {
+  position: relative;
+  padding: 0 70px 0 0;
+  &:before {
+    @include pseudo-content;
+    @include center-y();
+    position: absolute;
+    width: 39px;
+    height: 39px;
+    right: 0;
+    background-image: url('../img/white-tab-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.location-ico {
+  position: relative;
+  padding: 0 70px 0 0;
+  &:before {
+    @include pseudo-content;
+    @include center-y();
+    position: absolute;
+    width: 25px;
+    height: 31px;
+    right: 15px;
+    background-image: url('../img/white-location-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.zoom-ico {
+    display: inline-block;
+    position: relative;
+    width: 23px;
+    height: 23px;
+    top: 6px;
+    margin: 0 10px 0 0;
+    background-image: url('../img/zoom-ico-white.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.phone-ico {
+    display: inline-block;
+    position: relative;
+    width: 19px;
+    height: 19px;
+    top: 4px;
+    margin: 0 10px 0 0;
+    background-image: url('../img/phone-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.yellow-phone-ico {
+    display: inline-block;
+    position: relative;
+    width: 19px;
+    height: 19px;
+    top: 4px;
+    margin: 0 10px 0 0;
+    background-image: url('../img/yellow-phone-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.person-ico2 {
+    display: inline-block;
+    position: relative;
+    width: 23px;
+    height: 23px;
+    top: 5px;
+    margin: 0 10px 0 0;
+    background-image: url('../img/person-ico2.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.person-ico-white {
+    display: inline-block;
+    position: relative;
+    width: 23px;
+    height: 23px;
+    top: 6px;
+    margin: 0 10px 0 0;
+    background-image: url('../img/person-ico-white.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.star-ico-white {
+    display: inline-block;
+    position: relative;
+    width: 21px;
+    height: 21px;
+    top: 4px;
+    margin: 0 10px 0 0;
+    background-image: url('../img/star-ico-white.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.star-ico3 {
+    display: inline-block;
+    position: relative;
+    width: 21px;
+    height: 21px;
+    top: 4px;
+    margin: 0 10px 0 0;
+    background-image: url('../img/star-ico3.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.footer-youtube {
+    width: 30px;
+    height: 23px;
+    background-image: url('../img/blue-y-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.footer-fbook {
+    width: 23px;
+    height: 23px;
+    background-image: url('../img/blue-f-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.agent-fbook {
+    width: 20px;
+    height: 20px;
+    background-image: url('../img/green-f-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.agent-phone {
+    &:before {
+        background-image: url('../img/white-phone-ico.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.contact-us-phone {
+    &:before {
+        background-image: url('../img/green-phone-ico.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.agent-location {
+    &:before {
+        background-image: url('../img/white-location-ico2.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.contact-us-location {
+    &:before {
+        background-image: url('../img/green-location-ico.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.contact-us-email {
+    &:before {
+        background-image: url('../img/green-email-ico.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.contact-us-time {
+    &:before {
+        background-image: url('../img/green-time-ico.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+}
+
+.lock-ico {
+    width: 15px;
+    height: 17px;
+    background-image: url('../img/black-lock-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.cam-ico {
+    width: 15px;
+    height: 17px;
+    background-image: url('../img/black-cam-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.turn-ico {
+    width: 25px;
+    height: 17px;
+    background-image: url('../img/black-turn-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.close-x-ico {
+    width: 32px;
+    height: 32px;
+    background-image: url('../img/black-x-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.close-x-ico2 {
+    width: 26px;
+    height: 26px;
+    background-image: url('../img/yellow-x-ico.svg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+// Font awesome
+
+.fa-linkedin {
+    color: $eir-white;
+    height: 100px !important;
+    display: block;
+}
+
+.fa-google-plus {
+    color: #EB4040 !important;
+}
+
+.fa-twitter {
+    color: #85D3FF;
+}
+
+.fa-facebook {
+    color: #4A90E2;
+}
+
+

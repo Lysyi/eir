@@ -1,0 +1,191 @@
+.apply-popup-component {
+	@include cf;
+  direction: rtl;
+  display: none;
+  z-index: 3000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: $eir-gray-dark;
+  overflow-y: scroll;
+
+  &__inner {
+    @include cf;
+    @include contain-width();
+    @include box-sizing(border-box);
+    background-color: $eir-white;
+    border: solid $eir-white 1px;
+  }
+
+  .close-popup-btn {
+    cursor: pointer;
+    z-index: 20;
+    position: absolute;
+    margin: 20px;
+    left: 0;
+  }
+
+  .apply-popup-info-container {
+    @include cf;
+    @include box-sizing(border-box);
+    position: relative;
+    padding-bottom: 20px;
+
+    &--header {
+      margin-bottom: 20px;
+      padding: 25px 30px 15px 30px;
+      border-bottom: solid rgba($eir-black, 0.8) 1px;
+
+      h1 {
+        @include webfont(35px, $bold);
+        margin-bottom: 0;
+        color: rgba($eir-black, 0.8);
+      }
+    }
+
+    &--text {
+      @include box-sizing(border-box);
+      @include webfont(19px, $book);
+      @include cf;
+      padding: 10px 30px 30px 30px;
+
+      p {
+        margin-bottom: 30px;
+        color: #333333;
+      }
+
+      h3 {
+        @include webfont(19px, $bold);
+        margin-bottom: 20px;
+        color: rgba($eir-black, 0.8);
+      }
+    }
+
+    &--form {
+      @include box-sizing(border-box);
+      @include webfont(19px, $bold);
+      padding: 50px 30px 30px 30px;
+      text-align: left;
+
+      &--input[type="text"] {
+        @include box-sizing(border-box);
+        @include full-width();
+        @include webfont(19px, $bold);
+        height: 70px;
+        margin: 0 0 8px 0;
+        padding: 5px 15px 0 15px;
+        border: solid rgba($eir-black, 0.8) 1px;
+      }
+
+      &--txtarea {
+        @include box-sizing(border-box);
+        @include full-width();
+        @include webfont(19px, $bold);
+        display: block;
+        height: 140px;
+        margin: 0 0 8px 0;
+        padding: 15px;
+        border: solid rgba($eir-black, 0.8) 1px;
+      }
+
+      &--btn {
+        @include box-sizing(border-box);
+        @include full-width();
+        @include global-button($padding-t-b: 10px, $padding-l-r: 50px, $b-radius: 0px, $bg-color: $eir-green, $font-size: 35px, $border-color: transparent, $color: $eir-white);
+        @include webfont(35px, $bold);
+        padding: 15px 0 8px 0;
+        &:hover {
+          background-color: $eir-white;
+          color: $eir-green;
+        }
+      }
+    }
+
+  }
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+	.apply-popup-component {
+
+    &__inner {
+      @include center-x;
+    }
+
+    .apply-popup-info-container {
+      &--text {
+        @include col(5.5/12, $offset: 0.25/12);
+      }
+
+      &--form {
+        @include col(5.5/12, $offset: 0.25/12);
+        padding: 50px 30px 30px 0;
+      }
+    }
+
+	}
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up) {
+	.apply-popup-component {
+
+    &__inner {
+      @include center-x;
+    }
+
+    .apply-popup-info-container {
+      &--text {
+        @include col(5.5/12, $offset: 0.25/12);
+      }
+
+      &--form {
+        @include col(5.5/12, $offset: 0.25/12);
+        padding: 50px 30px 30px 0;
+      }
+    }
+
+	}
+}
+
+.js .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.inputfile + label {
+  @include box-sizing(border-box);
+  @include webfont(19px, $bold);
+  width: 100%;
+  margin: 40px 0 80px 0;
+  padding: 10px 0;
+  border-top: solid rgba($eir-black, 0.8) 1px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.no-js .inputfile + label {
+  display: none;
+}
+
+
+.inputfile-3 + label {
+  color: rgba($eir-black, 0.8);
+}
+
+.inputfile-3:focus + label,
+.inputfile-3.has-focus + label,
+.inputfile-3 + label:hover {
+  color: rgba($eir-black, 0.6);
+}
+

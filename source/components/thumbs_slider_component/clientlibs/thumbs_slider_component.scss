@@ -1,0 +1,122 @@
+.thumbs-slider-component {
+	@include cf;
+  @include box-sizing(border-box);
+  @include webfont(11px, $book);
+  @include contain-width();
+  display: none;
+  visibility: hidden;
+  position: absolute;
+  z-index: 500;
+  top: 241px;
+
+  &__inner {
+    @include cf;
+    @include box-sizing(border-box);
+    position: relative;
+    padding: 20px 0;
+	  background-color: rgba($eir-blue-dark, 0.8);
+  }
+
+  &__active {
+    display: none;
+  }
+
+  .owl-thumbs-slider-navigation {
+  	@include col(11.6/12, $offset: 0.4/12);
+    @include center-xy();
+    position: absolute;
+		.prev, .next {
+			display: inline-block;
+      margin: 0;
+		}
+		.next {
+      float: right;
+			@include transform(rotate(-180deg));
+		}
+  }
+
+	.owl-thumbs-slider-carousel {
+		@include col(11/12, $offset: 0.5/12);
+		overflow: hidden;
+
+		&__item{
+			@include cf;
+      width: 137px;
+      margin: 0 auto;
+			direction: rtl;
+		}
+	}
+
+	.thumbs-slider__text {
+		@include contain-width();
+    margin: 0 0 3px 0;
+		h3 {
+      @include webfont(10px, $bold);
+	    color: $eir-yellow;
+      margin: 0 0 5px 0;
+      span {
+        @include webfont(10px, $bold);
+        color: $eir-white;
+      }
+	  }
+	}
+
+	.thumbs-slider__image {
+    img {
+      width: 137px;
+      height: 70px;
+    }
+    .arrow-label {
+      @include arrow-label($bg-color: $eir-green);
+      position: absolute;
+      z-index: 10;
+      margin: 10px 0 0 0;
+    }
+	}
+
+}
+
+
+// Tablet
+@include breakpoint($bp-tablet) {
+	.thumbs-slider-component {
+    @include center-x();
+    z-index: 1111;
+    visibility: visible;
+    position: fixed;
+    top: 182px;
+
+    &__inner {
+      @include cf;
+      @include col(9.35/12);
+    }
+
+    &__active {
+      display: block;
+    }
+	}
+}
+
+
+// Desktop
+@include breakpoint($bp-desktop-and-up) {
+	.thumbs-slider-component {
+    @include center-x();
+    z-index: 1111;
+    visibility: visible;
+    position: fixed;
+    top: 182px;
+
+    &__inner {
+      @include cf;
+      @include col(9.35/12);
+    }
+
+    &__active {
+      display: block;
+    }
+	}
+}
+
+
+

@@ -1,0 +1,852 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Eretz-ir</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/lib/modernizr.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9uVtKPRj-uVD-KOOCwHLEgpDfLBVDOFE&callback=initMap"></script>
+</head>
+<body>
+    <div class="page-container
+    
+    ">
+
+<div class="main-menu-component" data-component="MainMenu">
+  <div class="main-menu-component__inner">
+    <div class="main-logo-block">
+      <div class="js-main-menu-burger main-menu-burger menu-burger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="main-logo">
+        <a class="main-logo__img" href="/"></a>
+        <a class="main-logo__text" href="/"></a>
+      </div>
+    </div>
+    <div class="main-menu-info">
+      <nav class="js-main-menu-nav main-menu-nav">
+        <ul>
+          <li class="main-menu-nav__item"><a href="#" class="js-success-popup-open">אודות</a></li>
+          <li class="main-menu-nav__item"><a href="#">נכסים למגורים</a></li>
+          <li class="main-menu-nav__item"><a href="#">נכסים להשקעה</a></li>
+          <li class="main-menu-nav__item"><a href="#" class="active js-setting-popup-open">סוכנים</a></li>
+          <li class="main-menu-nav__item"><a href="#">בלוג</a></li>
+          <li class="main-menu-nav__item"><a href="#">קריירה</a></li>
+          <li class="main-menu-nav__item"><a href="#">סיפורי הצלחה</a></li>
+          <li class="main-menu-nav__item"><a href="#">צור קשר</a></li>
+        </ul>
+      </nav>
+      <div class="search-block">
+        <div class="col">
+          <div class="main-menu-select-block">
+            <select class="js-main-menu-select main-menu-select">
+              <option value="">עיר</option>
+              <option value="">עיר 2</option>
+              <option value="">עיר 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="main-menu-select-block">
+            <select class="js-main-menu-select main-menu-select">
+              <option value="">שכונה</option>
+              <option value="">שכונה 2</option>
+              <option value="">שכונה 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <div class="main-menu-select-block">
+            <select class="js-main-menu-select main-menu-select">
+              <option value="">חדרים</option>
+              <option value="">חדרים 2</option>
+              <option value="">חדרים 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="col">
+          <button class="search-btn" name="button" type="button">חפש<span class="zoom-ico"></span></button>
+        </div>
+        <div class="col">
+          <a href="" class="phone">077-670-5959<span class="phone-ico"></span></a>
+        </div>
+        <div class="col">
+          <button class="js-signup-popup-open sign-btn" name="button" type="button">הרשמה לעדכונים<span class="person-ico2"></span></button>
+        </div>
+        <div class="col">
+          <button class="js-add-btn add-btn" name="button" type="button">נכסים שאהבתי<span class="star-ico3"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="js-thumbs-slider thumbs-slider-component" data-component="ThumbsSliderComponent">
+	<div class="thumbs-slider-component__inner">
+		<div class="owl-thumbs-slider-navigation">
+		  <a class="js-thumbs-slider-prev prev left-icon"></a>
+		  <a class="js-thumbs-slider-next next left-icon"></a>
+		</div>
+		<div class="owl-thumbs-slider-carousel">
+			<div class="owl-thumbs-slider-carousel__item">
+				<div class="thumbs-slider__text">
+					<h3>
+						וילה בשכונת נאות לון
+						<span>1,650,0000 ₪</span>
+					</h3>
+				</div>
+				<div class="thumbs-slider__image">
+					<span class="arrow-label">להשכרה</span>
+					<img src="img/content/img2.jpg" alt="">
+				</div>
+			</div>
+			<div class="owl-thumbs-slider-carousel__item">
+				<div class="thumbs-slider__text">
+					<h3>
+						וילה בשכונת נאות לון
+						<span>1,650,0000 ₪</span>
+					</h3>
+				</div>
+				<div class="thumbs-slider__image">
+					<span class="arrow-label">להשכרה</span>
+					<img src="img/content/img2.jpg" alt="">
+				</div>
+			</div>
+			<div class="owl-thumbs-slider-carousel__item">
+				<div class="thumbs-slider__text">
+					<h3>
+						וילה בשכונת נאות לון
+						<span>1,650,0000 ₪</span>
+					</h3>
+				</div>
+				<div class="thumbs-slider__image">
+					<span class="arrow-label">להשכרה</span>
+					<img src="img/content/img1.jpg" alt="">
+				</div>
+			</div>
+			<div class="owl-thumbs-slider-carousel__item">
+				<div class="thumbs-slider__text">
+					<h3>
+						וילה בשכונת נאות לון
+						<span>1,650,0000 ₪</span>
+					</h3>
+				</div>
+				<div class="thumbs-slider__image">
+					<span class="arrow-label">להשכרה</span>
+					<img src="img/content/img2.jpg" alt="">
+				</div>
+			</div>
+			<div class="owl-thumbs-slider-carousel__item">
+				<div class="thumbs-slider__text">
+					<h3>
+						וילה בשכונת נאות לון
+						<span>1,650,0000 ₪</span>
+					</h3>
+				</div>
+				<div class="thumbs-slider__image">
+					<span class="arrow-label">להשכרה</span>
+					<img src="img/content/img1.jpg" alt="">
+				</div>
+			</div>
+			<div class="owl-thumbs-slider-carousel__item">
+				<div class="thumbs-slider__text">
+					<h3>
+						וילה בשכונת נאות לון
+						<span>1,650,0000 ₪</span>
+					</h3>
+				</div>
+				<div class="thumbs-slider__image">
+					<span class="arrow-label">להשכרה</span>
+					<img src="img/content/img2.jpg" alt="">
+				</div>
+			</div>
+			<div class="owl-thumbs-slider-carousel__item">
+				<div class="thumbs-slider__text">
+					<h3>
+						וילה בשכונת נאות לון
+						<span>1,650,0000 ₪</span>
+					</h3>
+				</div>
+				<div class="thumbs-slider__image">
+					<span class="arrow-label">להשכרה</span>
+					<img src="img/content/img3.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="top-slider-component" data-component="TopSliderComponent">
+	<div class="top-slider-component__inner">
+		<div class="owl-top-slider-navigation">
+		  <a class="js-top-slider-prev prev left-icon"></a>
+		  <a class="js-top-slider-next next left-icon"></a>
+		</div>
+		<div class="owl-top-slider-carousel">
+			<div class="owl-top-slider-carousel__item">
+				<div class="top-slider__image">
+					<a href="#"><img src="img/content/img1.jpg" alt=""></a>
+				</div>
+				<div class="top-slider__text">
+					<div class="name">
+						<h3>
+							דירת 5 חדרים בנווה זאב
+							<span>1,650,0000 ₪</span>
+						</h3>
+						<span class="arrow-label">להשכרה</span>
+					</div>
+					<div class="info">
+						<div class="info__item bedrooms-ico2">
+							<h3>
+								חrטש
+								<span>230 יונב חטש</span>
+							</h3>
+						</div>
+						<div class="info__item shower-ico">
+							<h3>
+								היטבמא ירדח
+								<span>3</span>
+							</h3>
+						</div>
+						<div class="info__item surface-ico2">
+							<h3>
+								הניש ירדח
+								<span>6</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="owl-top-slider-carousel__item">
+				<div class="top-slider__image">
+					<a href="#"><img src="img/content/img2.jpg" alt=""></a>
+				</div>
+				<div class="top-slider__text">
+					<div class="name">
+						<h3>
+							דירת 5 חדרים בנווה זאב
+							<span>2,150,0000 ₪</span>
+						</h3>
+						<span class="arrow-label">להשכרה</span>
+					</div>
+					<div class="info">
+						<div class="info__item bedrooms-ico2">
+							<h3>
+								חrטש
+								<span>230 יונב חטש</span>
+							</h3>
+						</div>
+						<div class="info__item shower-ico">
+							<h3>
+								היטבמא ירדח
+								<span>13</span>
+							</h3>
+						</div>
+						<div class="info__item surface-ico2">
+							<h3>
+								הניש ירדח
+								<span>6</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="owl-top-slider-carousel__item">
+				<div class="top-slider__image">
+					<a href="#"><img src="img/content/img3.jpg" alt=""></a>
+				</div>
+				<div class="top-slider__text">
+					<div class="name">
+						<h3>
+							דירת 5 חדרים בנווה זאב
+							<span>10,0000 ₪</span>
+						</h3>
+						<span class="arrow-label">להשכרה</span>
+					</div>
+					<div class="info">
+						<div class="info__item bedrooms-ico2">
+							<h3>
+								חrטש
+								<span>230 יונב חטש</span>
+							</h3>
+						</div>
+						<div class="info__item shower-ico">
+							<h3>
+								היטבמא ירדח
+								<span>123</span>
+							</h3>
+						</div>
+						<div class="info__item surface-ico2">
+							<h3>
+								הניש ירדח
+								<span>600</span>
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="product-table-component" data-component="ProductTableComponent">
+	<div class="product-table-component__inner">
+
+    <div class="product-table-item">
+      <div class="product-table-item__text">
+        <div class="center-y">
+          <div class="col">
+            <h3>
+              <a href="#">
+                דירת 4 חדרים ברמות
+                <span>1,650,0000 ₪</span>
+              </a>
+            </h3>
+            <span class="arrow-label">להשכרה</span>
+          </div>
+          <div class="col">
+            <span class="info bedrooms-ico">
+              חדרי שינה<i>5</i>
+            </span>
+            <span class="info surface-ico">
+              שטח<i>140 מ"ר שטח בנוי</i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="product-table-item__img">
+        <a href="#">
+          <img src="img/content/img2.jpg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="product-table-item">
+      <div class="product-table-item__text">
+        <div class="center-y">
+          <div class="col">
+            <h3>
+              <a href="#">
+                דירת 4 חדרים ברמות
+                <span>1,650,0000 ₪</span>
+              </a>
+            </h3>
+            <span class="arrow-label">להשכרה</span>
+          </div>
+          <div class="col">
+            <span class="info bedrooms-ico">
+              חדרי שינה<i>5</i>
+            </span>
+            <span class="info surface-ico">
+              שטח<i>140 מ"ר שטח בנוי</i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="product-table-item__img">
+        <a href="#">
+          <img src="img/content/img1.jpg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="product-table-item">
+      <div class="product-table-item__text">
+        <div class="center-y">
+          <div class="col">
+            <h3>
+              <a href="#">
+                דירת 4 חדרים ברמות
+                <span>1,650,0000 ₪</span>
+              </a>
+            </h3>
+            <span class="arrow-label">להשכרה</span>
+          </div>
+          <div class="col">
+            <span class="info bedrooms-ico">
+              חדרי שינה<i>5</i>
+            </span>
+            <span class="info surface-ico">
+              שטח<i>140 מ"ר שטח בנוי</i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="product-table-item__img">
+        <a href="#">
+          <img src="img/content/img1.jpg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="product-table-item">
+      <div class="product-table-item__text">
+        <div class="center-y">
+          <div class="col">
+            <h3>
+              <a href="#">
+                דירת 4 חדרים ברמות
+                <span>1,650,0000 ₪</span>
+              </a>
+            </h3>
+            <span class="arrow-label">להשכרה</span>
+          </div>
+          <div class="col">
+            <span class="info bedrooms-ico">
+              חדרי שינה<i>5</i>
+            </span>
+            <span class="info surface-ico">
+              שטח<i>140 מ"ר שטח בנוי</i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="product-table-item__img">
+        <a href="#">
+          <img src="img/content/img3.jpg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="product-table-item">
+      <div class="product-table-item__text">
+        <div class="center-y">
+          <div class="col">
+            <h3>
+              <a href="#">
+                דירת 4 חדרים ברמות
+                <span>1,650,0000 ₪</span>
+              </a>
+            </h3>
+            <span class="arrow-label">להשכרה</span>
+          </div>
+          <div class="col">
+            <span class="info bedrooms-ico">
+              חדרי שינה<i>5</i>
+            </span>
+            <span class="info surface-ico">
+              שטח<i>140 מ"ר שטח בנוי</i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="product-table-item__img">
+        <a href="#">
+          <img src="img/content/img1.jpg" alt="">
+        </a>
+      </div>
+    </div>
+
+    <div class="product-table-item">
+      <div class="product-table-item__text">
+        <div class="center-y">
+          <div class="col">
+            <h3>
+              <a href="#">
+                דירת 4 חדרים ברמות
+                <span>1,650,0000 ₪</span>
+              </a>
+            </h3>
+            <span class="arrow-label">להשכרה</span>
+          </div>
+          <div class="col">
+            <span class="info bedrooms-ico">
+              חדרי שינה<i>5</i>
+            </span>
+            <span class="info surface-ico">
+              שטח<i>140 מ"ר שטח בנוי</i>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="product-table-item__img">
+        <a href="#">
+          <img src="img/content/img3.jpg" alt="">
+        </a>
+      </div>
+    </div>
+
+	</div>
+</div>
+
+<div class="begin-component" data-component="BeginComponent">
+	<div class="begin-component__inner">
+    <div class="begin-component-content">
+      <h1>ברוכים הבאים</h1>
+      <h2>קבלו התראות על הנכסים שאתם אוהבים</h2>
+      <div class="begin-component-list">
+        <div class="begin-component-item person-ico">
+          <h2>סיימנו</h2>
+          <p>
+            מעתה והלאה, בכל פעם שיעלה לאתר נכס אשר מתאים לפרופיל שמילאתם, אנחנו נדאג לעדכן אתכם על כך!
+          </p>
+        </div>
+        <div class="begin-component-item list-ico">
+          <h2>תופדעה םירחוב</h2>
+          <p>
+            מסמנים את הפרטים שהייתם רוצים בנכס, כמו איזור, כמות חדרים, גודל ומחיר
+          </p>
+        </div>
+        <div class="begin-component-item check-ico">
+          <h2>ונמייס</h2>
+          <p>
+            מעתה והלאה, בכל פעם שיעלה לאתר נכס אשר מתאים לפרופיל שמילאתם, אנחנו נדאג לעדכן אתכם על כך!
+          </p>
+        </div>
+      </div>
+      <div class="btn-block">
+        <button class="begin-component-btn" name="button" type="button">בואו נתחיל!</button>
+      </div>
+    </div>
+	</div>
+</div>
+
+<div class="product-list-component" data-component="ProductListComponent">
+	<div class="product-list-component__inner">
+    <!-- <h1>נכסים בבלעדיות הסוכן</h1> -->
+		<div class="product-list-item">
+      <div class="js-product-list-item product-list-item__img">
+        <a href="#"><img src="img/content/img1.jpg" alt=""></a>
+        <div class="js-product-list-info product-list-info">
+          <a href="#" class="star-icon2"></a>
+          <a href="#" class="lock-icon"></a>
+        </div>
+      </div>
+      <div class="product-list-item__text">
+        <h3>
+          <a href="#">
+            דירת 4 חדרים ברמות
+            <span>3,650 ₪</span>
+          </a>
+        </h3>
+        <span class="arrow-label">להשכרה</span>
+      </div>
+    </div>
+    <div class="product-list-item">
+      <div class="js-product-list-item product-list-item__img">
+        <a href="#"><img src="img/content/img3.jpg" alt=""></a>
+        <div class="js-product-list-info product-list-info">
+          <a href="#" class="star-icon2"></a>
+          <a href="#" class="lock-icon"></a>
+        </div>
+      </div>
+      <div class="product-list-item__text">
+        <h3>
+          <a href="#">
+            דירת 4 חדרים ברמות
+            <span>3,650 ₪</span>
+          </a>
+        </h3>
+        <span class="arrow-label">להשכרה</span>
+      </div>
+    </div>
+    <div class="product-list-item">
+      <div class="js-product-list-item product-list-item__img">
+        <a href="#"><img src="img/content/img2.jpg" alt=""></a>
+        <div class="js-product-list-info product-list-info">
+          <a href="#" class="star-icon2"></a>
+          <a href="#" class="lock-icon"></a>
+        </div>
+      </div>
+      <div class="product-list-item__text">
+        <h3>
+          <a href="#">
+            דירת 4 חדרים ברמות
+            <span>3,650 ₪</span>
+          </a>
+        </h3>
+        <span class="arrow-label">להשכרה</span>
+      </div>
+    </div>
+    <div class="product-list-item">
+      <div class="js-product-list-item product-list-item__img">
+        <a href="#"><img src="img/content/img1.jpg" alt=""></a>
+        <div class="js-product-list-info product-list-info">
+          <a href="#" class="star-icon2"></a>
+          <a href="#" class="lock-icon"></a>
+        </div>
+      </div>
+      <div class="product-list-item__text">
+        <h3>
+          <a href="#">
+            דירת 4 חדרים ברמות
+            <span>3,650 ₪</span>
+          </a>
+        </h3>
+        <span class="arrow-label">להשכרה</span>
+      </div>
+    </div>
+	</div>
+</div>
+
+<div class="home-content-component" data-component="HomeContentComponent">
+	<div class="home-content-component__inner">
+		<div class="home-content-component__title">
+      נפקט למסון בלרק - וענוף לפרומי
+      <img src="img/turtle-img.png" alt="">
+    </div>
+    <div class="content-block">
+      <h3>כלרשט מיחוצים. קלאצי סחטיר?</h3>
+      <p>אקווזמן קוואזי במר מודוף. אודיפו <a href="#">בלאסטיק</a> מונופץ קליר, בנפת נפקט למסון בלרק - וענוף לפרומי בלוף קינץ תתיח לרעח. לת צשחמי צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. קולהע צופעט <a href="#">למרקוח איבן</a> איף, ברומץ כלרשט מיחוצים. קלאצי סחטיר </p>
+    </div>
+	</div>
+</div>
+
+<div class="bottom-slider-component" data-component="BottomSliderComponent">
+	<div class="bottom-slider-component__inner">
+		<div class="owl-bottom-slider-title">
+			<h1>םינורחא םיסכנ</h1>
+		</div>
+		<div class="owl-bottom-slider-navigation">
+		  <a class="js-bottom-slider-prev prev left-icon"></a>
+		  <a class="js-bottom-slider-next next left-icon"></a>
+		</div>
+		<div class="owl-bottom-slider-carousel">
+			<div class="owl-bottom-slider-carousel__item">
+				<div class="bottom-slider__image">
+					<a href class="star-icon"></a>
+					<a href="#">
+						<img src="img/content/img1.jpg" alt="">
+					</a>
+				</div>
+				<div class="bottom-slider__text">
+					<h3>
+						<a href="#">
+							דירת 1 חדרים בנווה זאב
+							<span>הסוכן: מתן בן חמו</span>
+						</a>
+					</h3>
+					<span class="arrow-label">להשכרה</span>
+					<p>
+						1 לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
+					</p>
+				</div>
+			</div>
+			<div class="owl-bottom-slider-carousel__item">
+				<div class="bottom-slider__image">
+					<a href class="star-icon"></a>
+					<a href="#">
+						<img src="img/content/img2.jpg" alt="">
+					</a>
+				</div>
+				<div class="bottom-slider__text">
+					<h3>
+						<a href="#">
+							דירת 5 חדרים בנווה זאב
+							<span>הסוכן: מתן בן חמו</span>
+						</a>
+					</h3>
+					<span class="arrow-label">להשכרה</span>
+					<p>
+						2 לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
+					</p>
+				</div>
+			</div>
+			<div class="owl-bottom-slider-carousel__item">
+				<div class="bottom-slider__image">
+					<a href class="star-icon"></a>
+					<a href="#">
+						<img src="img/content/img3.jpg" alt="">
+					</a>
+				</div>
+				<div class="bottom-slider__text">
+					<h3>
+						<a href="#">
+							דירת 5 חדרים בנווה זאב
+							<span>הסוכן: מתן בן חמו</span>
+						</a>
+					</h3>
+					<span class="arrow-label">להשכרה</span>
+					<p>
+						3 לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית צש בליא, מנסוטו צמלח לביקו ננבי, צמוקו בלוקריה שיצמה ברורק. לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק. קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="js-signup-popup signup-popup-component" data-component="SignupPopupComponent">
+	<div class="signup-popup-component__inner">
+    <div class="js-signup-close-popup-btn close-popup-btn close-x-ico2"></div>
+		<div class="signup-popup-info-container">
+      <div class="signup-popup-info-container--header">
+        <h3>
+          נרשמים
+        </h3>
+        <p>
+          זה פשוט ומהיר, אנחנו מבטיחים <br> לא לעשות שימוש לרעהבמידע שתתנו לנו
+        </p>
+      </div>
+      <form  class="signup-popup-info-container--form" action="">
+        <div class="input-block">
+          <input type="text" placeholder="אלמ םש">
+          <input type="text" placeholder="לאוד">
+          <input type="text" placeholder="דיינ ןופלט">
+        </div>
+        <button class="btn">
+          הבא >>
+        </button>
+      </form>
+		</div>
+	</div>
+</div>
+
+<div class="js-setting-popup setting-popup-component" data-component="SettingPopupComponent">
+	<div class="setting-popup-component__inner">
+    <div class="js-setting-close-popup-btn close-popup-btn close-x-ico2"></div>
+		<div class="setting-popup-info-container">
+      <div class="setting-popup-info-container--header">
+        <h3>
+          בוחרים העדפות
+        </h3>
+        <p>
+          מסמנים את הפרטים שהייתם רוצים בנכס, וסיימנו
+        </p>
+      </div>
+      <form  class="setting-popup-info-container--form" action="">
+        <div class="setting-popup-select-block">
+          <select class="js-setting-popup-select setting-popup-select">
+            <option value="">שכונה</option>
+            <option value="">שכונה 2</option>
+            <option value="">שכונה 3</option>
+          </select>
+        </div>
+        <div class="setting-popup-select-block">
+          <select class="js-setting-popup-select setting-popup-select">
+            <option value="">שכונה</option>
+            <option value="">שכונה 2</option>
+            <option value="">שכונה 3</option>
+          </select>
+        </div>
+        <div class="setting-popup-select-block">
+          <select class="js-setting-popup-select setting-popup-select">
+            <option value="">שכונה</option>
+            <option value="">שכונה 2</option>
+            <option value="">שכונה 3</option>
+          </select>
+        </div>
+        <div class="setting-popup-select-block">
+          <select class="js-setting-popup-select setting-popup-select">
+            <option value="">שכונה</option>
+            <option value="">שכונה 2</option>
+            <option value="">שכונה 3</option>
+          </select>
+        </div>
+        <div class="setting-popup-select-block">
+          <select class="js-setting-popup-select setting-popup-select">
+            <option value="">שכונה</option>
+            <option value="">שכונה 2</option>
+            <option value="">שכונה 3</option>
+          </select>
+        </div>
+        <button class="btn">
+          שלח
+        </button>
+      </form>
+		</div>
+	</div>
+</div>
+
+<div class="js-success-popup success-popup-component" data-component="SuccessPopupComponent">
+	<div class="success-popup-component__inner">
+    <div class="js-success-close-popup-btn close-popup-btn close-x-ico2"></div>
+		<div class="success-popup-info-container">
+      <div class="success-popup-info-container--header">
+        <h3>
+          סיימנו
+        </h3>
+        <p>
+          הפרטים שלך הועברו בהצלחה!
+        </p>
+      </div>
+      <div class="success-popup-info-container--text">
+        <p>
+          מעכשיו, תקבל התראות לכתובת הדוא"ל בכל<br>
+          שיעלה לאתר שלנו נכס המתאים <br>לפרופיל שהזנת.
+        </p>
+        <p>
+          תודה רבה :)
+        </p>
+      </div>
+		</div>
+	</div>
+</div>
+
+<footer class="footer-section">
+    <div class="footer-section__inner">
+      <div class="footer-copyrt">
+        <a href="#" class="main-logo">
+          <span class="main-logo__text"></span>
+        </a>
+        &copy; 2016 - כל הזכויות שמורות לקבוצת ארץ עיר<br>
+         עוצב על ידי <img class="footer-copyrt__image" src="img/copyrt-img.svg" alt="">
+      </div>
+      <div class="footer-navigation">
+        <div class="footer-navigation__inner">
+          <h3 class="footer-title">מיקומים</h3>
+          <ul class="footer-list">
+            <li>
+              <a href="#">נאות לון (8)</a>
+            </li>
+            <li>
+              <a href="#">נווה זאב (6)</a>
+            </li>
+            <li>
+              <a href="#">רמות (6)</a>
+            </li>
+            <li>
+              <a href="#">שכונה ד' (4)</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-navigation__inner">
+          <h3 class="footer-title">נכסים אחרונים</h3>
+          <ul class="footer-list">
+            <li>
+              <a href="#">דירת 5 חדרים בנווה זאב</a>
+            </li>
+            <li>
+              <a href="#">דופלקס 4 חדרים ברמות</a>
+            </li>
+            <li>
+              <a href="#">דירת גן בשכונה א'</a>
+            </li>
+            <li>
+              <a href="#">וילה בנאות לון</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-navigation__inner">
+          <h3 class="footer-title">אפשרויות</h3>
+          <ul class="footer-list">
+            <li>
+              <a href="#">למכירה (64)</a>
+            </li>
+            <li>
+              <a href="#">להשכרה (14)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-social">
+        <h3 class="footer-title">ארץ עיר בדיגיטל</h3>
+        <a href="#" class="footer-youtube"></a>
+        <a href="#"  class="footer-fbook"></a>
+      </div>
+    </div>
+</footer>
+
+    </div> <!-- end .page-container (starts in head.ejs) -->
+    
+    <!-- My Scripts -->
+    <script type="text/javascript" src="js/combined.js"></script>
+
+</body>
+</html>
